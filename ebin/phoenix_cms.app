@@ -1,9 +1,10 @@
 {application,phoenix_cms,
              [{modules,['Elixir.PhoenixCMS.ContentType',
+                        'Elixir.PhoenixCMS.EmailImage',
                         'Elixir.PhoenixCMS.Revisions',
                         'Elixir.PhoenixCMS.VersionStore']},
               {optional_applications,[]},
-              {applications,[kernel,stdlib,elixir,logger,ecto_sql]},
+              {applications,[kernel,stdlib,elixir,logger,crypto,ecto_sql]},
               {description,"phoenix_cms"},
               {registered,[]},
-              {vsn,"0.0.3"}]}.
+              {vsn,"0.0.4"}]}.

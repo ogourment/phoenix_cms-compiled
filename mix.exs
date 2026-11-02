@@ -5,11 +5,13 @@ defmodule Mix.Tasks.Compile.BinaryPhoenixCms do
   @checksums %{
     "ebin/Elixir.PhoenixCMS.ContentType.beam" =>
       "3DC390A7FC54E35C618D90734033578E5D2C9A92510EEE5B2070DFA60B625AAD",
+    "ebin/Elixir.PhoenixCMS.EmailImage.beam" =>
+      "95200EEB3953003B4E7D5C1241596D84E78D8CFC3F057CE4322566BACE8F3432",
     "ebin/Elixir.PhoenixCMS.Revisions.beam" =>
       "BDF1C55782727BE98E4EEF8C367BBA29CA88B27C5157BA21C09D43574076FCA3",
     "ebin/Elixir.PhoenixCMS.VersionStore.beam" =>
       "F0B4721C4BE130900CA4D354AE84E6C934E2D9736B848C544900E5750438383D",
-    "ebin/phoenix_cms.app" => "589CCB31CFA4BACB1DA32F4A49722C49CEA264B262BEDE7E0137CEA0070E324E"
+    "ebin/phoenix_cms.app" => "91ABA4B1C23FBA17444CED834836AD740E2A87D2421618BF8EDFA4D13D0610A9"
   }
 
   @impl true
@@ -44,12 +46,12 @@ defmodule Compiled.PhoenixCms.MixProject do
   def project do
     [
       app: :phoenix_cms,
-      version: "0.0.3",
+      version: "0.0.4",
       elixir: "~> 1.20.0",
       compilers: [:binary_phoenix_cms],
       deps: [ecto_sql: "~> 3.13"]
     ]
   end
 
-  def application, do: [extra_applications: [:logger]]
+  def application, do: [extra_applications: [:logger, :crypto]]
 end
