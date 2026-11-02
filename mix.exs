@@ -3,11 +3,13 @@ defmodule Mix.Tasks.Compile.BinaryPhoenixCms do
   @moduledoc false
   @root __DIR__
   @checksums %{
+    "ebin/Elixir.PhoenixCMS.ContentType.beam" =>
+      "3DC390A7FC54E35C618D90734033578E5D2C9A92510EEE5B2070DFA60B625AAD",
     "ebin/Elixir.PhoenixCMS.Revisions.beam" =>
       "BDF1C55782727BE98E4EEF8C367BBA29CA88B27C5157BA21C09D43574076FCA3",
     "ebin/Elixir.PhoenixCMS.VersionStore.beam" =>
-      "22AC84B4E74094DD1C579436B9B2DCADB57E2C5DC5FFFC60028F143AB22A0FD0",
-    "ebin/phoenix_cms.app" => "BBCEA523ECA8562141F2E2697405BBDE1BB523ADFFB8C1CFDA78620D5B789AEA"
+      "F0B4721C4BE130900CA4D354AE84E6C934E2D9736B848C544900E5750438383D",
+    "ebin/phoenix_cms.app" => "589CCB31CFA4BACB1DA32F4A49722C49CEA264B262BEDE7E0137CEA0070E324E"
   }
 
   @impl true
@@ -42,7 +44,7 @@ defmodule Compiled.PhoenixCms.MixProject do
   def project do
     [
       app: :phoenix_cms,
-      version: "0.0.2",
+      version: "0.0.3",
       elixir: "~> 1.20.0",
       compilers: [:binary_phoenix_cms],
       deps: [ecto_sql: "~> 3.13"]
